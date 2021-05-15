@@ -1,0 +1,45 @@
+"Phrases"
+{
+	"AnnounceAntiRush"
+	{
+		"#format"		"{1:i}"
+		"en"			"{green}[ANTI-RUSH]{orange} Anti-rush barriers are enabled for{default}:{lime} {1}{orange} seconds"
+	}
+	
+	"NotifyPlayer"
+	{
+		"en"			"{green}[ANTI-RUSH]{orange} You cannot go through here yet!"
+	}
+	
+	"NotifyServer"
+	{
+		"#format"		"{1:s}"
+		"en"			"{green}[ANTI-RUSH]{orange} Player{green} {1}{orange} tried to go through beriers"
+	}
+	
+	"NotifySlay"
+	{
+		"en"			"{green}[ANTI-RUSH]{orange} You have been slayed for{green} rushing{orange}!"
+	}
+	
+	"NotifyServerSlay"
+	{
+		"#format"		"{1:s}"
+		"en"			"{green}[ANTI-RUSH]{orange} Player{green} {1}{orange} got slayed for {green}rushing{orange}"
+	}
+	
+	"NotifyAllowRush"
+	{
+		"en"			"{green}[ANTI-RUSH]{orange} Rushing is allowed until next round!"
+	}
+	
+	"LastManStanding"
+	{
+		"en"			"{green}[ANTI-RUSH]{orange} {red} Last man standing!{green} Rushing is allowed until next round !"
+	}
+	
+	"BombPlant"
+	{
+		"en"			"{green}[ANTI-RUSH]{orange} {red} Bomb has been planted!{green} Rushing is allowed until next round !"
+	}
+}

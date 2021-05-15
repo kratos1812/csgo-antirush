@@ -1,0 +1,43 @@
+"Zones"
+{
+	"0"
+	{
+		"name"		"antirush_ct_main"
+		"cordinate_a"		"496.629395 1795.969360 1702.410522"
+		"cordinate_b"		"483.324280 1604.031250 1831.529907"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"1"
+	{
+		"name"		"antirush_ct_door"
+		"cordinate_a"		"179.675827 2044.969360 1692.156006"
+		"cordinate_b"		"264.289734 2044.969360 1800.735718"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"2"
+	{
+		"name"		"antirush_ct_mid"
+		"cordinate_a"		"306.126648 -154.353226 1930.969360"
+		"cordinate_b"		"442.043213 502.529083 1613.000000"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"3"
+	{
+		"name"		"antirush_ct_b_main"
+		"cordinate_a"		"581.085693 -845.317871 1619.000000"
+		"cordinate_b"		"240.648590 -770.013062 1836.969360"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"4"
+	{
+		"name"		"antirush_ct_vent"
+		"cordinate_a"		"437.529297 -237.031250 1749.990479"
+		"cordinate_b"		"583.968750 -308.935883 1827.444336"
+		"vis"		"3"
+		"team"		"2"
+	}
+}

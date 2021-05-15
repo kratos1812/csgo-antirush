@@ -1,0 +1,19 @@
+"Zones"
+{
+	"0"
+	{
+		"name"		"antirush_ct_banana"
+		"cordinate_a"		"398.976440 1692.095581 129.144638"
+		"cordinate_b"		"56.495121 1740.451538 703.968750"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"1"
+	{
+		"name"		"antirush_ct_mid"
+		"cordinate_a"		"905.317810 682.968750 98.291954"
+		"cordinate_b"		"766.972717 -799.482727 395.466064"
+		"vis"		"3"
+		"team"		"2"
+	}
+}

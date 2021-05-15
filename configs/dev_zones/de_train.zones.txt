@@ -1,0 +1,43 @@
+"Zones"
+{
+	"0"
+	{
+		"name"		"antirush_ct_ivy"
+		"cordinate_a"		"1457.753906 607.905701 -215.968719"
+		"cordinate_b"		"1265.868652 627.188660 -64.031250"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"1"
+	{
+		"name"		"antirush_ct_main"
+		"cordinate_a"		"-536.083130 584.038879 -215.251694"
+		"cordinate_b"		"-523.493896 442.748108 23.229588"
+		"vis"		"0"
+		"team"		"2"
+	}
+	"2"
+	{
+		"name"		"csgo_antirush_pop"
+		"cordinate_a"		"-766.172363 -389.968750 143.298920"
+		"cordinate_b"		"-678.620178 -310.638153 16.031250"
+		"vis"		"0"
+		"team"		"2"
+	}
+	"3"
+	{
+		"name"		"antirush_ct_popdog"
+		"cordinate_a"		"-670.662170 -395.968750 -210.149750"
+		"cordinate_b"		"-663.764771 -300.031281 -84.303802"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"4"
+	{
+		"name"		"antirush_ct_B"
+		"cordinate_a"		"-960.031250 -813.676270 -148.694611"
+		"cordinate_b"		"-1174.929932 -858.158447 71.968758"
+		"vis"		"3"
+		"team"		"2"
+	}
+}

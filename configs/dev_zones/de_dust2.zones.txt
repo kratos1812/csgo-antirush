@@ -1,0 +1,35 @@
+"Zones"
+{
+	"0"
+	{
+		"name"		"antirush_ct_long"
+		"cordinate_a"		"836.031250 767.085205 0.975916"
+		"cordinate_b"		"886.556152 1211.969360 429.494781"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"1"
+	{
+		"name"		"antirush_ct_short"
+		"cordinate_a"		"53.670197 1326.031250 2.419540"
+		"cordinate_b"		"-49.134266 1597.969360 294.057281"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"2"
+	{
+		"name"		"antirush_ct_mid"
+		"cordinate_a"		"-321.031311 1595.048950 -120.734154"
+		"cordinate_b"		"-585.968750 1626.524414 270.922882"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"3"
+	{
+		"name"		"antirush_ct_tunnels"
+		"cordinate_a"		"-1919.031250 1740.225830 31.283752"
+		"cordinate_b"		"-2047.969360 1756.920044 244.087234"
+		"vis"		"3"
+		"team"		"2"
+	}
+}

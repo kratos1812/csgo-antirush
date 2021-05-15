@@ -1,0 +1,43 @@
+"Zones"
+{
+	"0"
+	{
+		"name"		"antirush_ct_palace"
+		"cordinate_a"		"107.968773 -2192.928467 -35.976555"
+		"cordinate_b"		"2.646667 -2260.618164 95.968773"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"1"
+	{
+		"name"		"antirush_ct_ramp"
+		"cordinate_a"		"196.233124 -1425.031250 -179.919769"
+		"cordinate_b"		"278.031311 -1610.984619 -28.066803"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"2"
+	{
+		"name"		"antirush_ct_mid"
+		"cordinate_a"		"-393.115936 -807.047974 -257.223267"
+		"cordinate_b"		"-462.101471 -334.000000 68.808983"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"3"
+	{
+		"name"		"antirush_ct_under"
+		"cordinate_a"		"-920.736328 -295.968750 -362.471191"
+		"cordinate_b"		"-1059.240723 -352.031311 -208.421753"
+		"vis"		"3"
+		"team"		"2"
+	}
+	"4"
+	{
+		"name"		"antirush_ct_apps"
+		"cordinate_a"		"-1699.189209 664.031250 -47.818596"
+		"cordinate_b"		"-1671.216797 879.222534 101.968773"
+		"vis"		"3"
+		"team"		"2"
+	}
+}
