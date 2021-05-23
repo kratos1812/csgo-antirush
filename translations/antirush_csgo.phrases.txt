@@ -4,42 +4,50 @@
 	{
 		"#format"		"{1:i}"
 		"en"			"{green}[ANTI-RUSH]{orange} Anti-rush barriers are enabled for{default}:{lime} {1}{orange} seconds"
+		"da"			"{green}[ANTI-RUSH{orange} Anti-rush barrierer er blevet aktiveret i{default}:{lime} {1}{orange} sekunder"
 	}
 	
 	"NotifyPlayer"
 	{
 		"en"			"{green}[ANTI-RUSH]{orange} You cannot go through here yet!"
+		"da"			"{green}[ANTI-RUSH{orange} Du kan ikke gå igennem her endnu!"
 	}
 	
 	"NotifyServer"
 	{
 		"#format"		"{1:s}"
-		"en"			"{green}[ANTI-RUSH]{orange} Player{green} {1}{orange} tried to go through beriers"
+		"en"			"{green}[ANTI-RUSH]{orange} Player{green} {1}{orange} tried to go through barriers"
+		"da"			"{green}[ANTI-RUSH]{orange} Spiller{green} {1}{orange} forsøgte at gå igennem barrieren"
 	}
 	
 	"NotifySlay"
 	{
 		"en"			"{green}[ANTI-RUSH]{orange} You have been slayed for{green} rushing{orange}!"
+		"da"			"{green}[ANTI-RUSH]{orange} Du er blevet slayed for at{green} rushe{orange}!"
 	}
 	
 	"NotifyServerSlay"
 	{
 		"#format"		"{1:s}"
 		"en"			"{green}[ANTI-RUSH]{orange} Player{green} {1}{orange} got slayed for {green}rushing{orange}"
+		"da"			"{green}[ANTI-RUSH]{orange} Spiller{green} {1}{orange} blevet slayed for at {green}rushe{orange}"
 	}
 	
 	"NotifyAllowRush"
 	{
 		"en"			"{green}[ANTI-RUSH]{orange} Rushing is allowed until next round!"
+		"da"			"{green}[ANTI-RUSH]{orange} Det er tilladt at rushe indtil næste runde!"
 	}
 	
 	"LastManStanding"
 	{
-		"en"			"{green}[ANTI-RUSH]{orange} {red} Last man standing!{green} Rushing is allowed until next round !"
+		"en"			"{green}[ANTI-RUSH]{orange} {red} Last man standing!{green} Rushing is allowed until next round!"
+		"da"			"{green}[ANTI-RUSH]{orange} {red} Sidste mand i live!{green} Det er tilladt at rushe indtil næste runde!"
 	}
 	
 	"BombPlant"
 	{
-		"en"			"{green}[ANTI-RUSH]{orange} {red} Bomb has been planted!{green} Rushing is allowed until next round !"
+		"en"			"{green}[ANTI-RUSH]{orange} {red} Bomb has been planted!{green} Rushing is allowed until next round!"
+		"da"			"{green}[ANTI-RUSH]{orange} {red} Bomben er blevet plantet!{green} Det er tillat at rushe indtil næste runde!"
 	}
 }
