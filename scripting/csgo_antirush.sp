@@ -447,10 +447,10 @@ public void Zone_OnClientEntry(int iClient, const char[] sZone)
 								
 								// Always set the velocity to at least 300 units
 								if(fVector[1] > 0.0 && fVector[1] < 300.0)
-									fVector[1] = 300.0;
+									fVector[1] = 350.0;
 									
 								if(fVector[0] > 0.0 && fVector[0] < 300.0)
-									fVector[0] = 300.0;	
+									fVector[0] = 350.0;	
 									
 								// Invert the z velocity so we don't bounce the player UP.
 								if(fVector[2] > 0.0)
@@ -481,12 +481,17 @@ public void Zone_OnClientEntry(int iClient, const char[] sZone)
 											{
 												if(IsClientInGame(iAdmin) && GetUserFlagBits(iAdmin))
 												{
-													CPrintToChat(iAdmin, "%T", "NotifyServer", LANG_SERVER, sPlayerName);
+													CPrintToChat(iAdmin, "%T", "NotifyServer", iAdmin, sPlayerName);
 												}
 											}
 										}
 									}							
 								}
+								
+								DataPack hData = new DataPack();
+								hData.WriteCell(GetClientUserId(iClient));
+								hData.WriteString(sZone);
+								RequestFrame(NextFrame_CheckBug, hData);
 							}	
 							// Slay
 							case 1:
@@ -529,6 +534,25 @@ public void Zone_OnClientEntry(int iClient, const char[] sZone)
 			}
 		}
 	}
+}
+
+void NextFrame_CheckBug(DataPack hData)
+{
+	hData.Reset();
+	int iClient = GetClientOfUserId(hData.ReadCell());
+	
+	if(iClient != 0 && IsClientInGame(iClient))
+	{
+		static char sZoneName[64];
+		hData.ReadString(sZoneName, sizeof(sZoneName));	
+		if(Zone_IsClientInZone(iClient, sZoneName, false))
+		{
+			CPrintToChat(iClient, "%T", "NotifySlayBug", iClient);
+			ForcePlayerSuicide(iClient);
+		}
+	}
+	
+	delete hData;
 }
 
 stock bool IsWarmupPeriod()

@@ -20,6 +20,11 @@
 		"da"			"{green}[ANTI-RUSH]{orange} Spiller{green} {1}{orange} forsøgte at gå igennem barrieren"
 	}
 	
+	"NotifySlayBug"
+	{
+		"en"			"{green}[ANTI-RUSH]{orange} You have been slayed for{green} trying to bug the barriers{orange}!"
+	}
+	
 	"NotifySlay"
 	{
 		"en"			"{green}[ANTI-RUSH]{orange} You have been slayed for{green} rushing{orange}!"
