@@ -18,7 +18,7 @@
 	}
 	"2"
 	{
-		"name"		"csgo_antirush_pop"
+		"name"		"antirush_ct_pop"
 		"cordinate_a"		"-766.172363 -389.968750 143.298920"
 		"cordinate_b"		"-678.620178 -310.638153 16.031250"
 		"vis"		"0"

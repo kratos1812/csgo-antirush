@@ -40,7 +40,7 @@ public Plugin myinfo =
 	name = 			"Anti-Rush Reborn",
 	author = 		"kRatoss",
 	description = 	"Provies In-Game bariers to prevent players from rushing",
-	version = 		"1.0"
+	version = 		"1.2"
 };
 
 public void OnPluginStart()
@@ -69,18 +69,6 @@ public void OnPluginStart()
 	HookEvent("bomb_planted", Event_BombPlanted);
 	
 	LoadTranslations("antirush_csgo.phrases");
-	
-	RegConsoleCmd("sm_debug", Command_Debug);
-}
-
-public Action Command_Debug(int client, int args)
-{
-	if(g_bAntiRush)
-	{
-		return Plugin_Handled;
-	}
-	
-	return Plugin_Handled;
 }
 
 public void OnMapStart()
@@ -432,31 +420,41 @@ public void Zone_OnClientEntry(int iClient, const char[] sZone)
 								static float fPlayerPosition[3];
 								GetClientAbsOrigin(iClient, fPlayerPosition);
 								
-								// Credits: Franc1sco
-								// ---------------------------------------------------------------------------------------
-								// Create vector from the given starting and ending points.
-								static float fVector[3];
-								MakeVectorFromPoints(fZonePosition, fPlayerPosition, fVector);
-								
-								// Normalize the vector (equal magnitude at varying distances).
-								NormalizeVector(fVector, fVector);
-								
-								// Apply the magnitude by scaling the vector (multiplying each of its components).
-								ScaleVector(fVector, 350.0);
-								// ---------------------------------------------------------------------------------------
-								
-								// Always set the velocity to at least 300 units
-								if(fVector[1] > 0.0 && fVector[1] < 300.0)
-									fVector[1] = 350.0;
+								// if less than 220 > shallow angle
+								// PrintToChatAll("distance: %f", GetVectorDistance(fZonePosition, fPlayerPosition));
+
+								if (GetVectorDistance(fZonePosition, fPlayerPosition) < 220.0)
+								{
+									TeleportEntity(iClient, NULL_VECTOR, NULL_VECTOR, fPlayerPosition);		
+								}
+								else
+								{
+									// Credits: Franc1sco
+									// ---------------------------------------------------------------------------------------
+									// Create vector from the given starting and ending points.
+									static float fVector[3];
+									MakeVectorFromPoints(fZonePosition, fPlayerPosition, fVector);
 									
-								if(fVector[0] > 0.0 && fVector[0] < 300.0)
-									fVector[0] = 350.0;	
+									// Normalize the vector (equal magnitude at varying distances).
+									NormalizeVector(fVector, fVector);
 									
-								// Invert the z velocity so we don't bounce the player UP.
-								if(fVector[2] > 0.0)
-									fVector[2] *= -1.0;
-								
-								TeleportEntity(iClient, NULL_VECTOR, NULL_VECTOR, fVector);
+									// Apply the magnitude by scaling the vector (multiplying each of its components).
+									ScaleVector(fVector, 350.0);
+									// ---------------------------------------------------------------------------------------
+	
+									// Always set the velocity to at least 200 units
+									if(fVector[1] > 0.0 && fVector[1] < 200.0)
+										fVector[1] = 200.0;
+										
+									if(fVector[0] > 0.0 && fVector[0] < 200.0)
+										fVector[0] = 200.0;	
+										
+									// Invert the z velocity so we don't bounce the player UP.
+									if(fVector[2] > 0.0)
+										fVector[2] *= -1.0;
+									
+									TeleportEntity(iClient, NULL_VECTOR, NULL_VECTOR, fVector);									
+								}
 								
 								if(g_bMessages)
 								{
@@ -487,11 +485,6 @@ public void Zone_OnClientEntry(int iClient, const char[] sZone)
 										}
 									}							
 								}
-								
-								DataPack hData = new DataPack();
-								hData.WriteCell(GetClientUserId(iClient));
-								hData.WriteString(sZone);
-								RequestFrame(NextFrame_CheckBug, hData);
 							}	
 							// Slay
 							case 1:
@@ -534,25 +527,6 @@ public void Zone_OnClientEntry(int iClient, const char[] sZone)
 			}
 		}
 	}
-}
-
-void NextFrame_CheckBug(DataPack hData)
-{
-	hData.Reset();
-	int iClient = GetClientOfUserId(hData.ReadCell());
-	
-	if(iClient != 0 && IsClientInGame(iClient))
-	{
-		static char sZoneName[64];
-		hData.ReadString(sZoneName, sizeof(sZoneName));	
-		if(Zone_IsClientInZone(iClient, sZoneName, false))
-		{
-			CPrintToChat(iClient, "%T", "NotifySlayBug", iClient);
-			ForcePlayerSuicide(iClient);
-		}
-	}
-	
-	delete hData;
 }
 
 stock bool IsWarmupPeriod()
